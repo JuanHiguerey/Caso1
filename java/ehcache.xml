@@ -1,0 +1,24 @@
+<ehcache>
+
+<defaultCache
+maxElementsInMemory = "1000"
+eternal = "false"
+timeToIdleSeconds = "300"
+timeToLiveSeconds = "600"
+/>
+
+<cache name = "Query3Min"
+maxElementsInMemory = "500"
+eternal = "false"
+timeToIdleSeconds = "300"
+timeToLiveSeconds = "600"
+/>
+
+<cache name = "Query3Max"
+maxElementsInMemory = "500"
+eternal = "false"
+timeToIdleSeconds = "300"
+timeToLiveSeconds = "600"
+/>
+
+</ehcache>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+      "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+      "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="hibernate.connection.driver_class">
+			com.microsoft.sqlserver.jdbc.SQLServerDriver
+		</property>
+		<property name="hibernate.connection.url">
+			jdbc:sqlserver://DESKTOP-9127RRA\MSSQL;databaseName=Caso1;encrypt=true;trustServerCertificate=true;
+		</property>
+
+		<property name="hibernate.connection.username">
+			sa
+		</property>
+
+    	<property name="hibernate.connection.password">
+			mssql
+		</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">10</property>
+
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.SQLServerDialect
+		</property>
+
+		<property name="hibernate.cache.use_second_level_cache">
+     		true
+		</property>
+
+		<property name = "hibernate.cache.region.factory_class">
+         	org.hibernate.cache.ehcache.EhCacheRegionFactory
+        </property>
+
+		<!-- List mapping annotation classes -->
+		<mapping resource="ehcache.xml"/>
+		<mapping class="com.bases2.maven.eclipse.Query3Min"/>
+		<mapping class="com.bases2.maven.eclipse.Query3Max"/>
+	</session-factory>
+</hibernate-configuration>
